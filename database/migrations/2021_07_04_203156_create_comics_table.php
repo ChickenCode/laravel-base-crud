@@ -17,12 +17,12 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->char('title', 100);
-            $table->char('description', 255);
-            $table->text('thumb');
+            $table->text('description')->nullable();
+            $table->text('thumb')->nullable();
             $table->float('price', 7, 2);
-            $table->char('series', 100);
-            $table->date('sale_date');
-            $table->char('type');
+            $table->char('series', 100)->nullable();
+            $table->date('sale_date')->nullable();
+            $table->char('type')->nullable();
         });
     }
 

@@ -1,3 +1,7 @@
+<script src="{{asset('js/app.js')}}"></script>
+
+@include('components.errors')
+
 <form action="{{ route('comics.store') }}" method="post">
     @csrf
 
@@ -24,3 +28,5 @@
 
     <input type="submit" value="invia">
 </form>
+
+<a href="{{route('comics.index')}}">Back to index</a>
